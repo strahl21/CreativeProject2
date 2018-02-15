@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="">
+    <title>How well do you know your words?</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+
+  <div class = "container">
+
+    <div class = "header">
+      <h1>How well do you know your words?</h1>
+    </div>
+
+    <div class = "weather">
+      <h2>Find words that mean the same thing!</h2>
+      <form>
+        <label>Word to find synonyms for:</label>
+        <br/>
+        <br/>
+        <input id="weatherInput" class="inputBar" type="text" placeholder = "What else means what I mean?"></input>
+        <br/>
+        <input id="weatherSubmit" class="button" type="submit" value="Go!"></input>
+        <input id="sameWord" class="button" type="submit" value="Same word I looked up"</input>
+      </form>
+    </div>
+
+    <div id="weatherResults" class = "weatherOutput">
+    </div>
+
+    <div class = "stack">
+      <h2> Find a definition of a word!</h2>
+      <form>
+        <label>Enter a word:</label>
+        <br/>
+        <br/>
+        <input id="stackInput" class="inputBar" type="text", placeholder="A word I don't know is..."></input>
+        <br/>
+        <input id="stackSubmit" class="button" type="submit" value="Define!"></input>
+      </form>
+    </div>
+
+    <div id="stackResults" class = "stackOutput">
+    </div>
+
+    <div class = "footer">
+	    <p>Git hub url: https://github.com/BYU-CS260-Winter-2018/lab-2-strahl21</p>
+      <a href="https://github.com/BYU-CS260-Winter-2018/lab-2-strahl21">Link To GitHub</a>
+    </div>
+  </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script text="type/javascript" src="/script.js">
+    </script>
+
+  </body>
+</html>

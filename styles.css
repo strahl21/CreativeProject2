@@ -1,0 +1,128 @@
+/* Set up grid */
+
+.container {
+  display: grid;
+  grid: repeat(5, 1fr) / 50% 50%;
+  grid-row-gap: 2em;
+  height: 800px;
+  max-height: 1500px;
+  max-width: 1500px;
+  grid-template-areas: "header header"
+                       "stack weather"
+                       "stackOutput weatherOutput"
+                       "stackOutput weatherOutput "
+                       "footer footer"
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  align-self: center;
+}
+
+.weather{
+  grid-area: weather;
+  text-align: center;
+  /*min-width: 200px;*/
+}
+
+.weatherOutput {
+  grid-area: weatherOutput;
+  text-align: left;
+  overflow: auto;
+  width: 80%;
+  height: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+.stack {
+  grid-area: stack;
+  text-align: center;
+}
+
+.stackOutput {
+  grid-area: stackOutput;
+  min-width: 300px;
+  overflow: auto;
+  width: 80%;
+  height: 90%;
+  justify-self: center;
+  align-self: center;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  align-self: center;
+}
+
+
+/* Format form */
+
+input[type="text"], select {
+  padding: 12px 20px;
+  width: 45%;
+}
+
+.button {
+  background-color: blue;
+  color: white;
+  width: 51%;
+  height: auto;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 1.5em;
+  padding: 14px 20px;
+  border: none;
+}
+
+.button:hover {
+  background-color: #1874cd;
+}
+
+#sameWord, #weatherSubmit {
+  display: inline-block;
+  width: 25%;
+}
+
+#sameWord {
+  min-width: 175px;
+}
+
+label {
+  font-size: 18px;
+}
+
+/* other styling */
+body {
+  /*background-color: #e8e8e8;*/
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+/* Responsive Design */
+@media screen and (max-width : 770px) {
+  .container {
+    display: grid;
+    grid: repeat(8, 1fr) / 1fr 50% 1fr;
+    grid-row-gap: 1em;
+    height: 1200px;
+    width: 700px;
+    grid-template-areas: "header header header"
+                         ". stack ."
+                         ". stackOutput ."
+                         ". stackOutput ."
+                         ". weather ."
+                         ". weatherOutput ."
+                         ". weatherOutput ."
+                         "footer footer footer"
+  }
+  .weatherOutput {
+    overflow: auto;
+  }
+  #sameWord, #weatherSubmit {
+    display: block;
+    width: 75%;
+    margin-left: 11%;
+  }
+}
